@@ -3,10 +3,10 @@ import logo from '../../logo.svg';
 
 const Header = props => {
   return (
-    <section className='header'>
-      <button className='nav-btn'/>
-      <h2 className='headline'>Headline</h2>
-      <img src={logo} className="App-logo" alt="logo" />
+    <section className='header row'>
+      <button className='nav-btn small-1 columns'>|||</button>
+      <h2 className='headline small-8 columns'>Cattle</h2>
+      <img src={logo} className="App-logo small-3 columns" alt="logo" />
     </section>
   )
 }
