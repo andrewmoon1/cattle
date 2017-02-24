@@ -23,10 +23,10 @@ const Header = props => {
   // };
 
   return (
-    <section className='header row'>
-      <button className='nav-bttn show-for-small-only small-1  columns'>|||</button>
-      <h2 className='headline small-8 medium-10 columns'>Cattle</h2>
-      <img src={logo} className="App-logo small-2 columns" alt="logo" />
+    <section className='header row' data-equalizer>
+      <button className='nav-bttn show-for-small-only small-1  columns' data-equalizer-watch>|||</button>
+      <h2 className='headline small-8 medium-10 columns' data-equalizer-watch>Cattle</h2>
+      <img src={logo} className="app-logo small-2 columns" alt="logo" data-equalizer-watch/>
       <section className='navigation row'>
 
       </section>

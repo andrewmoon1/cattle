@@ -76,7 +76,8 @@ module.exports = {
     alias: {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
-      'react-native': 'react-native-web'
+      'react-native': 'react-native-web',
+      foundation: 'foundation-sites/dist/js/foundation.min'
     }
   },
 
@@ -119,6 +120,10 @@ module.exports = {
           limit: 10000,
           name: 'static/media/[name].[hash:8].[ext]'
         }
+      },
+      {
+        test: /(foundation\.min)/,
+        loader: 'exports?foundation=jQuery.fn.foundation'
       },
       // Process JS with Babel.
       {
@@ -203,7 +208,12 @@ module.exports = {
     // to restart the development server for Webpack to discover it. This plugin
     // makes the discovery automatic so you don't have to restart.
     // See https://github.com/facebookincubator/create-react-app/issues/186
-    new WatchMissingNodeModulesPlugin(paths.appNodeModules)
+    new WatchMissingNodeModulesPlugin(paths.appNodeModules),
+    // jquey should work, regardless of module
+    new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
