@@ -6,7 +6,7 @@ class Footer extends Component {
 
   render() {
     return (
-        <section className='footer row' data-equalizer>
+        <section className='footer'>
           <h3 className='about'>This is a toy project</h3>
         </section>
       );

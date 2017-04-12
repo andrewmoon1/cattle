@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
 import './style/App.scss';
-import Header from './components/Header/Header.js';
-import Footer from './components/Footer/Footer.js';
-import Code from './components/Code/Code.js';
-import $ from 'jquery';
-import { foundation } from 'foundation-sites/dist/js/foundation.min';
-
-$.fn.foundation = foundation;
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Code from './components/Code/Code';
 
 class App extends Component {
-  componentDidMount() {
-    $(document).ready(function() {
-      $(document).foundation();
-    });
-  }
+
   render() {
     return (
       <div className="App">
