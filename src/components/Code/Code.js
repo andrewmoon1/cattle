@@ -18,12 +18,19 @@ class Code extends React.Component {
   render() {
     return (
       <section className="code-input">
+        <div className="text-area-container">
+          <textarea placeholder="write description here" />
+        </div>
         <textarea
           className="code-mirror"
           ref="editor"
           autoComplete="off"
           defaultValue="write code here"
         />
+        <div className="code-buttons">
+          <button className="code-text">Insert TextArea</button>
+          <button className="code-area">Insert CodeArea</button>
+        </div>
       </section>
     );
   }
