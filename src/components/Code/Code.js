@@ -17,14 +17,14 @@ class Code extends React.Component {
   }
   render() {
     return (
-      <div>
+      <section className="code-input">
         <textarea
           className="code-mirror"
           ref="editor"
           autoComplete="off"
-          defaultValue="default value"
+          defaultValue="write code here"
         />
-      </div>
+      </section>
     );
   }
 }

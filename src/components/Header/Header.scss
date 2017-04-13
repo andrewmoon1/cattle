@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  &:hover, &:active, &:focus {
+    color: rgb(117,87,241);
+    outline: none;
+  }
+}

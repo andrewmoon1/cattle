@@ -1,4 +1,12 @@
 .code-input {
+  display: flex;
+  align-self: center;
   width: 80%;
   height: 400px;
+  border: 1px solid rgb(54,41,200);
+}
+
+.cm-s-default {
+  height: 100%;
+  width: 100%;
 }

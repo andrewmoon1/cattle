@@ -1,9 +1,10 @@
-// @import "../../node_modules/foundation-sites/scss/foundation";
-// @include foundation-everything;
 
 .App {
   text-align: center;
   min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(141,191, 80);
 }
 
 .App-logo {

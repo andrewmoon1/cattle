@@ -5,11 +5,12 @@ import { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-        <section className='header row'>
-          <h1 className='headline'>Cattle</h1>
-          <section className='navigation row'>
-
-          </section>
+        <section className="header">
+          <h1 className="headline">Cattle</h1>
+          <div className="navigation">
+            <a href="#" className="nav-link">Alogrithms</a>
+            <a href="#" className="nav-link">Submit Alogrithm</a>
+          </div>
         </section>
       );
     }
