@@ -1,3 +1,5 @@
+@import 'colors';
+
 .code-input {
   display: flex;
   align-self: center;
@@ -9,9 +11,9 @@
 .cm-s-default {
   height: 50%;
   width: 100%;
-  border: 1px solid rgb(54,41,200);
+  border: 1px solid $blue-0;
   &:hover, &:active, &:focus {
-    border: 2px solid rgb(54,41,200);
+    border: 2px solid $blue-2;
     outline: none;
   }
 }
@@ -25,18 +27,19 @@
     height: 27px;
     font-size: 14px;
     color: white;
-    background-color: rgb(54,41,200);
-    border: 1px solid rgb(54,41,200);
+    background-color: $blue-4;
+    border: 1px solid $blue-4;
     border-radius: 10px;
     &:hover, &:active, &:focus {
-      background-color: rgb(117,87,241);
+      background-color: $blue-0;
       outline: none;
     }
   }
 }
 
 .CodeMirror-linenumbers {
-  background-color: rgba(141,191, 80,0.3);
+  background-color: $green-0;
+  opacity: 0.3;
 }
 
 .CodeMirror-linenumber {
@@ -48,12 +51,15 @@
   margin: 15px 0;
 }
 textarea {
-  width: 100%;
   height: 100%;
-  border: 1px solid rgb(54,41,200);
+  width: 100%;
+  text-align-last: center;
+  white-space: normal;
+  text-align: justify;
+  border: 1px solid $blue-0;
   padding: 0;
   &:hover, &:active, &:focus {
-    border: 2px solid rgb(54,41,200);
+    border: 2px solid $blue-2;
     outline: none;
   }
 }

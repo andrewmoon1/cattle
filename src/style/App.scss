@@ -1,10 +1,11 @@
+@import 'colors';
 
 .App {
   text-align: center;
   min-width: 400px;
   display: flex;
   flex-direction: column;
-  color: rgb(141,191, 80);
+  color: $green-3;
 }
 
 .App-logo {

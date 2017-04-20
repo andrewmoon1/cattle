@@ -1,3 +1,5 @@
+@import 'colors';
+
 .header {
   display: flex;
   flex-direction: column;
@@ -9,8 +11,13 @@
 }
 
 .nav-link {
+  color: $blue-4;
   &:hover, &:active, &:focus {
-    color: rgb(117,87,241);
+    color: $blue-0;
     outline: none;
+  }
+
+  &:visited {
+    color: $purplish-4;
   }
 }

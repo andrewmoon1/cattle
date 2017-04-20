@@ -4,7 +4,7 @@ import cm from 'codemirror';
 import React from 'react';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/monokai.css';
-import './Code.scss';
+import '../style/Code.scss';
 
 require('codemirror/mode/markdown/markdown');
 
