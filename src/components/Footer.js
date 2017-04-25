@@ -1,15 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../style/Footer.scss';
 
-class Footer extends Component {
-
-  render() {
-    return (
-      <section className="footer">
-        <h3 className="about">From Austin with love</h3>
-      </section>
-    );
-  }
-}
+const Footer = () =>
+  <section className="footer">
+    <h3 className="about">Under Construction</h3>
+  </section>;
 
 export default Footer;

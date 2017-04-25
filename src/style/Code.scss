@@ -5,12 +5,13 @@
   align-self: center;
   flex-direction: column;
   width: 80%;
-  height: 400px;
+  min-height: 400px;
 }
 
 .cm-s-default {
-  height: 50%;
+  min-height: 200px;
   width: 100%;
+  margin-top: 10px;
   border: 1px solid $blue-0;
   &:hover, &:active, &:focus {
     border: 2px solid $blue-2;
@@ -51,13 +52,13 @@
   margin: 15px 0;
 }
 textarea {
-  height: 100%;
+  min-height: 200px;
   width: 100%;
   text-align-last: center;
   white-space: normal;
   text-align: justify;
   border: 1px solid $blue-0;
-  padding: 0;
+  padding: 5px 0 5px 0;
   &:hover, &:active, &:focus {
     border: 2px solid $blue-2;
     outline: none;

@@ -1,39 +1,26 @@
 /* global document */
 
-import cm from 'codemirror';
 import React from 'react';
-import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/monokai.css';
+import ReactDOM from 'react-dom';
 import '../style/Code.scss';
-
-require('codemirror/mode/markdown/markdown');
+import CodeArea from './CodeArea';
+import TextArea from './TextArea';
+import CodeBttns from './CodeBttns';
 
 class Code extends React.Component {
-  componentDidMount() {
-    const textArea = document.querySelector('.code-mirror');
-    this.codeMirror = cm.fromTextArea(textArea, {
-      lineNumbers: true,
-    });
-  }
+
   render() {
     return (
       <section className="code-input">
-        <div className="text-area-container">
-          <textarea placeholder="write description here" />
-        </div>
-        <textarea
-          className="code-mirror"
-          ref="editor"
-          autoComplete="off"
-          defaultValue="write code here"
+        {this.props.docAreas}
+        <CodeBttns
+          addCode={this.props.addCode}
+          addText={this.props.addText}
         />
-        <div className="code-buttons">
-          <button className="code-text">Insert TextArea</button>
-          <button className="code-area">Insert CodeArea</button>
-        </div>
       </section>
     );
   }
 }
+
 
 export default Code;

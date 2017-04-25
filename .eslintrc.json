@@ -6,7 +6,6 @@
       {
          "extensions": [".js", ".jsx"]
       }
-    ],
-    "arrow-body-style": ["error", "never"]
+    ]
   }
 }
