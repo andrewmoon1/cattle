@@ -1,10 +1,7 @@
 /* global document */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import '../style/Code.scss';
-import CodeArea from './CodeArea';
-import TextArea from './TextArea';
 import CodeBttns from './CodeBttns';
 
 class Code extends React.Component {

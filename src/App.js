@@ -1,7 +1,6 @@
 /* global document */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './style/App.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
