@@ -5,27 +5,17 @@ import './style/App.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Code from './components/Code';
-// import CodeArea from './components/CodeArea';
-import TextArea from './components/TextArea';
-
-const CodeMirror = require('react-codemirror');
-
-require('codemirror/lib/codemirror.css');
-
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.cmOptions = {
-      lineNumbers: true,
-    };
+
 
     this.state = {
       docAreas: [
-        <TextArea key={0} />,
-        <CodeMirror key={1} options={this.cmOptions} />,
+        'textArea',
+        'codeMirror',
       ],
-      areaCount: 2,
     };
 
 
@@ -35,18 +25,22 @@ class App extends React.Component {
 
   addCode() {
     this.setState({
-      docAreas: this.state.docAreas.concat(
-      [<CodeMirror key={this.state.areaCount} options={this.cmOptions}/>],
-    ),
-      areaCount: this.state.areaCount += 1,
+      docAreas: this.state.docAreas.concat([
+        'codeMirror',
+      ]),
     });
   }
 
   addText() {
     this.setState({
-      docAreas: this.state.docAreas.concat(
-        [<TextArea key={this.state.areaCount} />],
-      ),
+      docAreas: this.state.docAreas.concat([
+        'textArea',
+      ]),
+    });
+  }
+
+  increment() {
+    this.setState({
       areaCount: this.state.areaCount += 1,
     });
   }
@@ -59,6 +53,8 @@ class App extends React.Component {
           addCode={this.addCode}
           addText={this.addText}
           docAreas={this.state.docAreas}
+          areaCount={this.state.areaCount}
+          increment={this.increment}
         />
         <Footer />
       </div>
