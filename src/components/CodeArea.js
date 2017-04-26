@@ -8,6 +8,7 @@ require('codemirror/mode/markdown/markdown');
 
 
 class CodeArea extends React.Component {
+
   componentDidMount() {
     cm.fromTextArea(this.codeMirror, {
       lineNumbers: true,
