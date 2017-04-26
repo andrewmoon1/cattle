@@ -1,6 +1,7 @@
-/* global document */
+/* global document PropTypes */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../style/Code.scss';
 import CodeBttns from './CodeBttns';
 import TextArea from './TextArea';
@@ -25,14 +26,16 @@ class Code extends React.Component {
       count += 1;
       if (area === 'textArea') {
         areas.push(
-          <TextArea key={count} />
-        )
-
+          <TextArea key={count} />,
+        );
       } else if (area === 'codeMirror') {
         areas.push(
-          <CodeMirror key={count} options={this.cmOptions} />
+          <CodeMirror
+            key={count}
+            options={this.cmOptions}
+            defaultValue={'write code here'}
+          />,
         );
-
       }
     });
     return (
@@ -46,6 +49,16 @@ class Code extends React.Component {
     );
   }
 }
+
+Code.propTypes = {
+  docAreas: PropTypes.arrayOf(PropTypes.string),
+  addCode: PropTypes.func.isRequired,
+  addText: PropTypes.func.isRequired,
+};
+
+Code.defaultProps = {
+  docAreas: ['textArea', 'codeMirror'],
+};
 
 
 export default Code;
