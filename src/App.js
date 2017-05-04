@@ -16,11 +16,21 @@ class App extends React.Component {
         'textArea',
         'codeMirror',
       ],
+      documentation: {
+        'text-0': 'write description here',
+        'code-0': 'write code here',
+      },
     };
 
 
     this.addCode = this.addCode.bind(this);
     this.addText = this.addText.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log(event.target)
   }
 
   addCode() {
@@ -51,10 +61,12 @@ class App extends React.Component {
         <Header />
         <Code
           addCode={this.addCode}
+          submit={this.handleSubmit}
           addText={this.addText}
           docAreas={this.state.docAreas}
           areaCount={this.state.areaCount}
           increment={this.increment}
+          documentation={this.state.documentation}
         />
         <Footer />
       </div>

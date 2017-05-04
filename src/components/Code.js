@@ -22,37 +22,43 @@ class Code extends React.Component {
   render() {
     const areas = [];
     let count = 0;
-    this.props.docAreas.forEach((area) => {
+    this.props.docAreas.map((area) => {
       count += 1;
       if (area === 'textArea') {
         areas.push(
-          <TextArea key={count} />,
+          <TextArea
+            key={count}
+            documentation={this.props.documentation}
+          />,
         );
       } else if (area === 'codeMirror') {
         areas.push(
           <CodeMirror
             key={count}
             options={this.cmOptions}
-            defaultValue={'write code here'}
+            defaultValue={this.props.documentation['code-0']}
           />,
         );
       }
     });
     return (
-      <section className="code-input">
+      <form className="code-input" onSubmit={this.props.submit}>
         {areas}
         <CodeBttns
           addCode={this.props.addCode}
+          submit={this.props.submit}
           addText={this.props.addText}
         />
-      </section>
+      </form>
     );
   }
 }
 
 Code.propTypes = {
   docAreas: PropTypes.arrayOf(PropTypes.string),
+  documentation: PropTypes.objectOf(PropTypes.string).isRequired,
   addCode: PropTypes.func.isRequired,
+  submit: PropTypes.func.isRequired,
   addText: PropTypes.func.isRequired,
 };
 
